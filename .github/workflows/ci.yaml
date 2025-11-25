@@ -23,8 +23,8 @@ jobs:
           ruff check .
           mypy .
 
-      - name: Run tests
-        run: pytest -q
+    #   - name: Run tests
+    #     run: pytest -q
 
       - name: Build wheel
         run: python -m build

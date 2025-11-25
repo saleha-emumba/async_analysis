@@ -1,18 +1,20 @@
-[project]
-name = "async_analyzer"
+
+[tool.poetry]
+name = "async-analyzer"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "salehaTanveer",email = "saleha.zia900@gmail.com"}
-]
+description = "A Python application for asynchronous data analysis."
+authors = ["salehaTanveer <saleha.zia900@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
+packages = [
+	{ include = "analyzer" }
 ]
 
-packages = [
-    { include = "analyzer" }
-]
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+aiohttp = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
 
 [tool.poetry.scripts]
 async-analyze = "main:cli"

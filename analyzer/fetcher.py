@@ -17,8 +17,8 @@ async def fetch(session: aiohttp.ClientSession, url: str) -> Dict:
             }
 
     except Exception as e:
-        import pdb
-        pdb.set_trace()  # Add BREAKPOINT HERE FOR DEBUGGING!
+        # import pdb
+        # pdb.set_trace()  # Add BREAKPOINT HERE FOR DEBUGGING!
         return {
             "url": url,
             "status": None,
