@@ -1,5 +1,6 @@
 from typing import List, Dict
 
+
 def print_report(results: List[Dict]):
     total = len(results)
     success = sum(1 for r in results if r["status"] and r["status"] < 400)

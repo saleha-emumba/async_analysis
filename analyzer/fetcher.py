@@ -15,10 +15,16 @@ async def fetch(session: aiohttp.ClientSession, url: str) -> Dict:
                 "status": resp.status,
                 "time": time.perf_counter() - start,
             }
-        
+
     except Exception as e:
-        import pdb; pdb.set_trace()  # Add BREAKPOINT HERE FOR DEBUGGING!
-        return {...}
+        import pdb
+        pdb.set_trace()  # Add BREAKPOINT HERE FOR DEBUGGING!
+        return {
+            "url": url,
+            "status": None,
+            "time": time.perf_counter() - start,
+            "error": str(e),
+        }
 
     except Exception as e:
         return {
