@@ -1,0 +1,8 @@
+{
+    "urls": [
+        "https://example.com",
+        "www.mysite.com",
+        "https://httpbin.org/get",
+        "https://google.com"
+    ]
+}
